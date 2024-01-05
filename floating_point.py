@@ -29,8 +29,8 @@ def hex_dec(ew,mw,h):
         s=1
     elif sign=="1":
         s=-1
-    print(f"{s},{exp},{mant}")
+    #print(f"{s},{exp},{mant}")
     #print(f"{sign},{e},{m}")
     #print(-2**(ew-1))
     return(s*(2**exp)*mant)
-print(hex_dec(5,10,"8001")) 
+#print(hex_dec(5,10,"8001")) 
