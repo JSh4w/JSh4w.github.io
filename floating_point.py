@@ -23,14 +23,9 @@ def hex_dec(ew,mw,h):
     for a,b in enumerate(e):
         exp+=int(b)*(2**(len(e)-1-a))
     for a,b in enumerate(m):
-        #print(int(b)*(2**-(a+1)))
         mant+=int(b)*(2**-(a+1))
     if sign=="0":
         s=1
     elif sign=="1":
         s=-1
-    #print(f"{s},{exp},{mant}")
-    #print(f"{sign},{e},{m}")
-    #print(-2**(ew-1))
     return(s*(2**exp)*mant)
-#print(hex_dec(5,10,"8001")) 

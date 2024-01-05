@@ -3,32 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML 5 Boilerplate</title>
+    <script src="float.js" type="text/javascript" ></script>
   </head>
   <body>
     <div id="calc-container">
-      <h1>QTc calculator</h1>
-      <p>Please enter details to calculate the QTc:</p>
-      <label>Enter sex:</label>
+      <h1>Mixed Precision Floating Point Calculator</h1>
+      <p>A fun little project that seems to have gone under the radar of the online hardware coding community.
+        Maybe no one needs it, or its too trivial. Or maybe its brilliant. No idea.
+      </p>
+      <label>Signed or unsigned</label>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="sex" value="m" id="male-option">
+        <input class="form-check-input" type="radio" name="sign" value="signed" id="signed-option">
         <label class="form-check-label" for="male-option">
-          Male
+          Signed
         </label>
      </div>
      <div class="form-check">
-       <input class="form-check-input" type="radio" name="sex" value="f" id="female-option" checked>
+       <input class="form-check-input" type="radio" name="sign" value="unsigned" id="unsigned-option" checked>
        <label class="form-check-label" for="female-option">
-         Female
+         Unsigned
        </label>
      </div>
      <br>
-     <label>Enter HR (BPM):</label>
-     <input type="number" name="hr">
+     <label>Enter Exponent Width:</label>
+     <input type="number" name="ew">
      <br><br>
-     <label>Enter QT interval (msec):</label>
-     <input type="number" name="qt">
+     <label>Enter Mantissa Width </label>
+     <input type="number" name="mw">
      </br><br>
      <input type="submit" name="next" value="Next">
+     </br><br>
+     <div id ='text'></div>
     </div>
   </body>
 </html>
