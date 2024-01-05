@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML 5 Boilerplate</title>
+    <script src="float.js"></script>
   </head>
   <body>
     <div id="calc-container">
@@ -10,6 +11,19 @@
       <p>A fun little project that seems to have gone under the radar of the online hardware coding community.
         Maybe no one needs it, or its too trivial. Or maybe its brilliant. No idea.
       </p>
+      <label for="ew">EW:</label>
+      <input type="number" id="ew"><br><br>
+      
+      <label for="mw">MW:</label>
+      <input type="number" id="mw"><br><br>
+  
+      <label for="h">Hex Value (h):</label>
+      <input type="text" id="h"><br><br>
+  
+      <button onclick="convert()">Convert</button><br><br>
+      <label for="result">Result:</label>
+      <input type="text" id="result" readonly><br>
+      
       <label>Signed or unsigned</label>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="sign" value="signed" id="signed-option">
@@ -32,8 +46,6 @@
      </br><br>
      <input type="submit" name="next" value="Next">
      </br><br>
-     <script src="index.js" type="text/javascript" ></script>
-     <div id ='text'></div>
     </div>
   </body>
 </html>

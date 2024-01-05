@@ -32,9 +32,21 @@ function hexDec(ew, mw, h) {
         mant += parseInt(m[i]) * Math.pow(2, -(i + 1));
     }
     const s = sign === "0" ? 1 : -1;
-    //return s * Math.pow(2, exp) * mant;
-    const result = s *Math.pow(2,exp) *mant;
-    document.getElementById("text").innerText=result;
+    return s * Math.pow(2, exp) * mant;
+    //const result = s *Math.pow(2,exp) *mant;
+    //document.getElementById("text").innerText=result;
 }
-window.onload = hexDec('5','10','1234')
-document.createElement("p").textContent = "hello"
+//window.onload = hexDec('5','10','1234')
+//document.createElement("p").textContent = "hello"
+function convert() {
+    const ew = parseInt(document.getElementById('ew').value);
+    const mw = parseInt(document.getElementById('mw').value);
+    const h = document.getElementById('h').value.toLowerCase();
+
+    try {
+        const result = hexDec(ew, mw, h);
+        document.getElementById('result').value = result;
+    } catch (e) {
+        alert(e.message);
+    }
+}
