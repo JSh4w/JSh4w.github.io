@@ -37,3 +37,4 @@ function hexDec(ew, mw, h) {
     document.getElementById("text").innerText=result;
 }
 window.onload = hexDec('5','10','1234')
+document.createElement("p").textContent = "hello"
