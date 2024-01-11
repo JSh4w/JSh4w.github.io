@@ -19,12 +19,24 @@ function hexDec(ew, mw, h) {
     let exp = -Math.pow(2, ew - 1) + 1;
     let mant = 0;
     
-    if (e === '0'.repeat(e.length)) {
-        console.log("denorm");
+
+    // Check for zeros, infinities, and NaNs
+    if (e === '0'.repeat(ew)) {
+        if (m === '0'.repeat(mw)) {
+            return 0; // Zero
+        }
+        console.log("Denormal");
         exp += 1;
+    } else if (e === '1'.repeat(ew)) {
+        if (m === '0'.repeat(mw)) {
+            return sign === "0" ? Infinity : -Infinity; // Infinity
+        }
+        return NaN; // NaN
     } else {
-        mant = 1.0;
+        mant = 1.0; // Normalized number
     }
+
+    //calculating exponent and mantissa
     for (let i = 0; i < e.length; i++) {
         exp += parseInt(e[i]) * Math.pow(2, e.length - 1 - i);
     }
@@ -59,7 +71,7 @@ function convert() {
             ew=11;
             mw=52;
         }else{
-            throw new Error("Non-standard hex length")
+            alert("Non-standard hex length");
         }
     }else{
         ew=parseInt(ew);

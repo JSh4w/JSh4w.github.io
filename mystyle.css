@@ -6,3 +6,7 @@ body {
     color: navy;
     margin-left: 20px;
   }
+.signBit { color: red; }
+.exponentBits { color: green; }
+.mantissaBits { color: blue; }
+  

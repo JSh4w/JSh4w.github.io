@@ -11,6 +11,7 @@
       <p>A fun little project that seems to have gone under the radar of the online hardware coding community.
         Maybe no one needs it, or its too trivial. Or maybe its brilliant. No idea.
       </p>
+
       <label for="ew">EW:</label>
       <input type="number" id="ew"><br><br>
       
@@ -19,6 +20,17 @@
   
       <label for="h">Hex Value (h):</label>
       <input type="text" id="h"><br><br>
+
+      <!-- Radio buttons for choosing input type -->
+      <label><input type="radio" name="inputType" value="hex" checked> Hexadecimal</label>
+      <label><input type="radio" name="inputType" value="bin"> Binary</label>
+
+      <!-- Input field for hexadecimal/binary number -->
+      <input type="text" id="h">
+
+      <!-- Container for color-coded binary display -->
+      <div id="binaryDisplay"></div>
+      
   
       <button onclick="convert()">Convert</button><br><br>
       <label for="result">Result:</label>
