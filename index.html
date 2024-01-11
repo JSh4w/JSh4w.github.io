@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>HTML 5 Boilerplate</title>
+    <title>Mixed Float Point Hex to Decimal Converter</title>
     <script src="float.js"></script>
+    <style src="mystyle.css"></style>
   </head>
   <body>
     <div id="calc-container">
@@ -18,22 +19,13 @@
       <label for="mw">MW:</label>
       <input type="number" id="mw"><br><br>
   
-      <!--<label for="h">Hex Value (h):</label>-->
-      <!--<input type="text" id="h"><br><br>-->
-
-      <!-- Radio buttons for choosing input type -->
-      <label><input type="radio" name="inputType" value="hex" checked> Hexadecimal</label>
-      <label><input type="radio" name="inputType" value="bin"> Binary</label>
-
-      <!-- Input field for hexadecimal/binary number -->
-      <input type="text" id="h">
-
-      <!-- Container for color-coded binary display -->
-      <div id="binaryDisplay"></div>
-      
+      <label for="h">Hex Value (h):</label>
+      <input type="text" id="h"><br><br>  
   
       <button onclick="convert()">Convert</button><br><br>
       <label for="result">Result:</label>
       <input type="text" id="result" readonly><br>
+
+      <div id="binaryDisplay"></div>
   </body>
 </html>

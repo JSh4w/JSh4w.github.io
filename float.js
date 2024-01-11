@@ -5,6 +5,8 @@ const hex = {
     "c": "1100", "d": "1101", "e": "1110", "f": "1111"
 };
 
+
+
 function hexDec(ew, mw, h) {
     let x = "";
     for (let a of h) {
@@ -54,6 +56,32 @@ function fillIfEmpty(x) {
     }
   }
 
+
+
+  function convert() {
+    var ew = document.getElementById('ew').value;
+    var mw = document.getElementById('mw').value;
+    const h = document.getElementById('h').value.toLowerCase();
+    var hex_length = h.length;
+    if (ew === '' && mw === '') {
+        // ... existing logic ...
+    } else {
+        ew = parseInt(ew);
+        mw = parseInt(mw);
+    }
+
+    try {
+        const result = hexDec(ew, mw, h);
+        document.getElementById('result').value = result;
+
+        // Convert hex to binary and display
+        const binaryValue = hexToBinary(h, ew + mw + 1);
+        displayBinary(binaryValue, ew, mw);
+    } catch (e) {
+        alert(e.message);
+    }
+}
+
 //parseInt()
 function convert() {
     var ew = document.getElementById('ew').value;
@@ -84,3 +112,54 @@ function convert() {
         alert(e.message);
     }
 }
+
+
+
+//function convert() {
+//    var ew = document.getElementById('ew').value;
+//    var mw = document.getElementById('mw').value;
+//    const h = document.getElementById('h').value.toLowerCase();
+//    var hex_length = h.length;
+//    if (ew === '' && mw === '') {
+//        // ... existing logic ...
+//    } else {
+//        ew = parseInt(ew);
+//        mw = parseInt(mw);
+//    }
+//
+//    try {
+//        const result = hexDec(ew, mw, h);
+//        document.getElementById('result').value = result;
+//
+//        // Convert hex to binary and display
+//        const binaryValue = hexToBinary(h, ew + mw + 1);
+//        displayBinary(binaryValue, ew, mw);
+//    } catch (e) {
+//        alert(e.message);
+//    }
+//}
+//
+//// Convert hexadecimal to binary
+//function hexToBinary(hexString, length) {
+//    let binary = '';
+//    for (let character of hexString) {
+//        binary += hex[character];
+//    }
+//    // Ensure the binary string is of the correct length
+//    return binary.padStart(length, '0');
+//}
+//
+//// Display binary with color coding
+//function displayBinary(binary, ew, mw) {
+//    const sign = binary[0];
+//    const exponent = binary.substring(1, 1 + ew);
+//    const mantissa = binary.substring(1 + ew);
+//
+//    // Create color-coded HTML
+//    const binaryHTML = `<span class="signBit">${sign}</span>` +
+//                       `<span class="exponentBits">${exponent}</span>` +
+//                       `<span class="mantissaBits">${mantissa}</span>`;
+//
+//    // Display in an element
+//    document.getElementById('binaryDisplay').innerHTML = binaryHTML;
+//}
