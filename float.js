@@ -33,16 +33,38 @@ function hexDec(ew, mw, h) {
     }
     const s = sign === "0" ? 1 : -1;
     return s * Math.pow(2, exp) * mant;
-    //const result = s *Math.pow(2,exp) *mant;
-    //document.getElementById("text").innerText=result;
 }
-//window.onload = hexDec('5','10','1234')
-//document.createElement("p").textContent = "hello"
-function convert() {
-    const ew = parseInt(document.getElementById('ew').value);
-    const mw = parseInt(document.getElementById('mw').value);
-    const h = document.getElementById('h').value.toLowerCase();
 
+function fillIfEmpty(x) {
+    var inputField = document.getElementById(x);
+    if (inputField.value === '') {
+      inputField.value = ''; // Replace 'Default Value' with the value you want to set
+    }
+  }
+
+//parseInt()
+function convert() {
+    var ew = document.getElementById('ew').value;
+    var mw = document.getElementById('mw').value;
+    const h = document.getElementById('h').value.toLowerCase();
+    var hex_length= h.length;
+    if (ew==='' && mw===''){
+        if(hex_length===4){
+            ew=5;
+            mw=10;
+        }else if(hex_length===8){
+            ew=8;
+            mw=23;
+        }else if(hex_length===16){
+            ew=11;
+            mw=52;
+        }else{
+            throw new Error("Non-standard hex length")
+        }
+    }else{
+        ew=parseInt(ew);
+        mw=parseInt(mw);
+    }
     try {
         const result = hexDec(ew, mw, h);
         document.getElementById('result').value = result;
