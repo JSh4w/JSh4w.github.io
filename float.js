@@ -79,13 +79,15 @@ function hexDec(ew, mw, h) {
     return s * Math.pow(2, exp) * mant;
 }
 
-function hex_to_bin_colour(ew,h){
+function hex_to_bin_colour(ew, h){
     let x = "";
     for (let a of h) {
-        x += hex+hex_to_bin[a];
+        x += hex_to_bin[a];
     }
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
+    }else if (ew+mw+1 !==x.length){
+    x=x.substring(x.length-ew-mw-1);
     }
     var sign = x[0];
     var e = x.substring(1, ew + 1);
@@ -94,8 +96,9 @@ function hex_to_bin_colour(ew,h){
     //document.getElementById('binaryDisplay').innerHTML = sign+e+m;
     //    Create color-coded HTML
     const binaryHTML = `<span class="signBit">${sign}</span>` +
-                       `<span class="exponentBits">${e}</span>` +
+                      `<span class="exponentBits">${e}</span>` +
                        `<span class="mantissaBits">${m}</span>`;
+   // Display in an element
     return binaryHTML;
     //document.getElementById('binaryDisplay').innerHTML = binaryHTML;
     
@@ -141,8 +144,7 @@ function convert() {
     try {
         const result = hexDec(ew, mw, h);
         document.getElementById('result').value = result;
-        document.getElementById('binaryDisplay').innerHTML = hex_to_bin_colour(ew,h);
-        //hex_to_bin_colour(ew, mw, h);
+        document.getElementById('binaryDisplay').innerHTML = hex_to_bin_colour(ew, h);
     } catch (e) {
         document.getElementById('result').value = e.message;
     }
