@@ -79,7 +79,7 @@ function hexDec(ew, mw, h) {
     return s * Math.pow(2, exp) * mant;
 }
 
-function hex_to_bin_colour(ew, mw, h){
+function hex_to_bin_colour(ew,h){
     let x = "";
     for (let a of h) {
         x += hex+hex_to_bin[a];
@@ -93,11 +93,11 @@ function hex_to_bin_colour(ew, mw, h){
      // Display in an element
     //document.getElementById('binaryDisplay').innerHTML = sign+e+m;
     //    Create color-coded HTML
-    const binaryHTML = `<span class="signBit">${sign}</span>` //+
-    //                   `<span class="exponentBits">${e}</span>` +
-    //                   `<span class="mantissaBits">${m}</span>`;
-   // Display in an element
-    document.getElementById('binaryDisplay').innerHTML = binaryHTML;
+    const binaryHTML = `<span class="signBit">${sign}</span>` +
+                       `<span class="exponentBits">${e}</span>` +
+                       `<span class="mantissaBits">${m}</span>`;
+    return binaryHTML
+    //document.getElementById('binaryDisplay').innerHTML = binaryHTML;
     
     //displayElement.innerHTML = `<span class="signBit">${sign}</span><span class="exponentBits">${exponent}</span><span class="mantissaBits">${mantissa}</span>`;
 }
@@ -141,6 +141,7 @@ function convert() {
     try {
         const result = hexDec(ew, mw, h);
         document.getElementById('result').value = result;
+        document.getElementById('binaryDisplay').innerHTML = hex_to_bin_colour(ew,h);
         //hex_to_bin_colour(ew, mw, h);
     } catch (e) {
         document.getElementById('result').value = e.message;
