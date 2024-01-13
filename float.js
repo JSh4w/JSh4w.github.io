@@ -38,15 +38,13 @@ function hexDec(ew, mw, h) {
     for (let a of h) {
         x += hex[a];
     }
-    const sign = x[0];
     if (x.length !== ew + mw + 1) {
         throw new Error("Invalid length");
     }
-
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
     }
-
+    const sign = x[0];
     const e = x.substring(1, ew + 1);
     const m = x.substring(ew + 1);
     let exp = -Math.pow(2, ew - 1) + 1;
@@ -80,14 +78,30 @@ function hexDec(ew, mw, h) {
     return s * Math.pow(2, exp) * mant;
 }
 
-function fillIfEmpty(x) {
-    var inputField = document.getElementById(x);
-    if (inputField.value === '') {
-      inputField.value = ''; // Replace 'Default Value' with the value you want to set
+function hex_to_bin_colour(h){
+    let x = "";
+    for (let a of h) {
+        x += hex[a];
     }
-  }
+    if (document.getElementById("TF32").disabled === true){
+        x=x.substring(1);
+    }
+    var sign = x[0];
+    var e = x.substring(1, ew + 1);
+    var m = x.substring(ew + 1);
+    const binaryHTML = `<span class="signBit">${sign}</span>` +
+                        `<span class="exponentBits">${e}</span>` +
+                        `<span class="mantissaBits">${m}</span>`;
 
-//parseInt()
+     // Display in an element
+    document.getElementById('binaryDisplay').innerHTML = binaryHTML;
+    
+    //displayElement.innerHTML = `<span class="signBit">${sign}</span><span class="exponentBits">${exponent}</span><span class="mantissaBits">${mantissa}</span>`;
+}
+
+
+
+
 function convert() {
     var ew = document.getElementById('ew').value;
     var mw = document.getElementById('mw').value;
@@ -123,10 +137,10 @@ function convert() {
         ew=8;
         mw=10;
     }
-
     try {
         const result = hexDec(ew, mw, h);
         document.getElementById('result').value = result;
+        hex_to_bin_colour(h);
     } catch (e) {
         alert(e.message);
     }
