@@ -96,7 +96,7 @@ function hex_to_bin_colour(ew,h){
     const binaryHTML = `<span class="signBit">${sign}</span>` +
                        `<span class="exponentBits">${e}</span>` +
                        `<span class="mantissaBits">${m}</span>`;
-    return binaryHTML
+    return binaryHTML;
     //document.getElementById('binaryDisplay').innerHTML = binaryHTML;
     
     //displayElement.innerHTML = `<span class="signBit">${sign}</span><span class="exponentBits">${exponent}</span><span class="mantissaBits">${mantissa}</span>`;
