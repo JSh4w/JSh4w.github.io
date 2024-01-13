@@ -93,7 +93,7 @@ function convert() {
     var mw = document.getElementById('mw').value;
     const h = document.getElementById('h').value.toLowerCase();
     var hex_length= h.length;
-    if (ew==='' && mw===''){
+    if (ew==='' && mw==='' && document.getElementById("custom").disabled===true){
         if(hex_length===4){
             ew=5;
             mw=10;
