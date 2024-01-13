@@ -5,7 +5,33 @@ const hex = {
     "c": "1100", "d": "1101", "e": "1110", "f": "1111"
 };
 
+window.onload = function() {
+    selectType('custom'); // Select 'custom' on page load
+};
 
+function selectType(type) {
+    // Disable all input fields initially
+    document.getElementById('ew').disabled = true;
+    document.getElementById('mw').disabled = true;
+
+    // Reset all buttons to unselected state
+    document.getElementById('custom').disabled = false;
+    document.getElementById('F16').disabled = false;
+    document.getElementById('F32').disabled = false;
+    document.getElementById('BF16').disabled = false;
+    document.getElementById('TF32').disabled = false;
+
+    // Enable inputs and set the button to selected state for 'custom'
+    if (type === 'custom') {
+        document.getElementById('ew').disabled = false;
+        document.getElementById('mw').disabled = false;
+        document.getElementById('customInputs').style.display = '';
+        document.getElementById('custom').disabled = true;
+    } else {
+        document.getElementById('customInputs').style.display = 'none';
+        document.getElementById(type).disabled = true;
+    }
+}
 
 function hexDec(ew, mw, h) {
     let x = "";
@@ -56,32 +82,6 @@ function fillIfEmpty(x) {
     }
   }
 
-
-
-  function convert() {
-    var ew = document.getElementById('ew').value;
-    var mw = document.getElementById('mw').value;
-    const h = document.getElementById('h').value.toLowerCase();
-    var hex_length = h.length;
-    if (ew === '' && mw === '') {
-        // ... existing logic ...
-    } else {
-        ew = parseInt(ew);
-        mw = parseInt(mw);
-    }
-
-    try {
-        const result = hexDec(ew, mw, h);
-        document.getElementById('result').value = result;
-
-        // Convert hex to binary and display
-        const binaryValue = hexToBinary(h, ew + mw + 1);
-        displayBinary(binaryValue, ew, mw);
-    } catch (e) {
-        alert(e.message);
-    }
-}
-
 //parseInt()
 function convert() {
     var ew = document.getElementById('ew').value;
@@ -113,42 +113,6 @@ function convert() {
     }
 }
 
-
-
-//function convert() {
-//    var ew = document.getElementById('ew').value;
-//    var mw = document.getElementById('mw').value;
-//    const h = document.getElementById('h').value.toLowerCase();
-//    var hex_length = h.length;
-//    if (ew === '' && mw === '') {
-//        // ... existing logic ...
-//    } else {
-//        ew = parseInt(ew);
-//        mw = parseInt(mw);
-//    }
-//
-//    try {
-//        const result = hexDec(ew, mw, h);
-//        document.getElementById('result').value = result;
-//
-//        // Convert hex to binary and display
-//        const binaryValue = hexToBinary(h, ew + mw + 1);
-//        displayBinary(binaryValue, ew, mw);
-//    } catch (e) {
-//        alert(e.message);
-//    }
-//}
-//
-//// Convert hexadecimal to binary
-//function hexToBinary(hexString, length) {
-//    let binary = '';
-//    for (let character of hexString) {
-//        binary += hex[character];
-//    }
-//    // Ensure the binary string is of the correct length
-//    return binary.padStart(length, '0');
-//}
-//
 //// Display binary with color coding
 //function displayBinary(binary, ew, mw) {
 //    const sign = binary[0];

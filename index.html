@@ -10,14 +10,23 @@
     <div id="calc-container">
       <h1>Mixed Precision Floating Point Calculator</h1>
       <p>A fun little project that seems to have gone under the radar of the online hardware coding community.
-        Maybe no one needs it, or its too trivial. Or maybe its brilliant. No idea.
+      Quite likely no one needs it 
       </p>
+      <div id="floatingPointSelector">
+        <button id="custom" onclick="selectType('custom')">Custom</button>
+        <button id="F16" onclick="selectType('F16')">F16</button>
+        <button id="F32" onclick="selectType('F32')">F32</button>
+        <button id="BF16" onclick="selectType('BF16')">BF16</button>
+        <button id="TF32" onclick="selectType('TF32')">TF32</button>
+      </div>
 
-      <label for="ew">EW:</label>
-      <input type="number" id="ew"><br><br>
+      <div id="customInputs" style="display:none;">
+        <label for="ew">EW:</label>
+        <input type="number" id="ew" disabled><br><br>
       
-      <label for="mw">MW:</label>
-      <input type="number" id="mw"><br><br>
+        <label for="mw">MW:</label>
+        <input type="number" id="mw" disabled><br><br>
+      </div>
   
       <label for="h">Hex Value (h):</label>
       <input type="text" id="h"><br><br>  
@@ -26,6 +35,6 @@
       <label for="result">Result:</label>
       <input type="text" id="result" readonly><br>
 
-      <div id="binaryDisplay"></div>
+    </div>
   </body>
 </html>
