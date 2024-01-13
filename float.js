@@ -90,10 +90,7 @@ function hex_to_bin_colour(ew, mw, h){
     var e = x.substring(1, ew + 1);
     var m = x.substring(ew + 1);
      // Display in an element
-    document.getElementById('binaryDisplay').innerHTML =`<span class="signBit">${sign}</span>`+
-                                                        `<span class="exponentBits">${e}</span>`+
-                                                        `<span class="mantissaBits">${m}</span>`;
-
+    document.getElementById('binaryDisplay').innerHTML = sign+e+m;
     //ew,mw,h;
     
     //displayElement.innerHTML = `<span class="signBit">${sign}</span><span class="exponentBits">${exponent}</span><span class="mantissaBits">${mantissa}</span>`;
