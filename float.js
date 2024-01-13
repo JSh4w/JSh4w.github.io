@@ -38,11 +38,11 @@ function hexDec(ew, mw, h) {
     for (let a of h) {
         x += hex[a];
     }
-    if (x.length !== ew + mw + 1) {
-        throw new Error("Invalid length");
-    }
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
+    }
+    if (x.length !== ew + mw + 1) {
+        throw new Error("Invalid length");
     }
     const sign = x[0];
     const e = x.substring(1, ew + 1);
@@ -89,12 +89,8 @@ function hex_to_bin_colour(h){
     var sign = x[0];
     var e = x.substring(1, ew + 1);
     var m = x.substring(ew + 1);
-    const binaryHTML = `<span class="signBit">${sign}</span>` +
-                        `<span class="exponentBits">${e}</span>` +
-                        `<span class="mantissaBits">${m}</span>`;
-
      // Display in an element
-    document.getElementById('binaryDisplay').innerHTML = binaryHTML;
+    document.getElementById('binaryDisplay').innerHTML = x;
     
     //displayElement.innerHTML = `<span class="signBit">${sign}</span><span class="exponentBits">${exponent}</span><span class="mantissaBits">${mantissa}</span>`;
 }
