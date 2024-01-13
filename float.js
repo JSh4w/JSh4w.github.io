@@ -78,7 +78,7 @@ function hexDec(ew, mw, h) {
     return s * Math.pow(2, exp) * mant;
 }
 
-function hex_to_bin_colour(h){
+function hex_to_bin_colour(h,ew,mw){
     let x = "";
     for (let a of h) {
         x += hex[a];
@@ -90,7 +90,7 @@ function hex_to_bin_colour(h){
     var e = x.substring(1, ew + 1);
     var m = x.substring(ew + 1);
      // Display in an element
-    document.getElementById('binaryDisplay').innerHTML = x;
+    document.getElementById('binaryDisplay').innerHTML =ew,mw,h;
     
     //displayElement.innerHTML = `<span class="signBit">${sign}</span><span class="exponentBits">${exponent}</span><span class="mantissaBits">${mantissa}</span>`;
 }
