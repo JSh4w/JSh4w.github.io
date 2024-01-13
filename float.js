@@ -44,7 +44,7 @@ function hexDec(ew, mw, h) {
         x=x.substring(x.length-ew-mw-1);
     }
     if (x.length !== ew + mw + 1) {
-        throw new Error(x.length);
+        throw new Error("Invalid Inputs");
     }
     const sign = x[0];
     const e = x.substring(1, ew + 1);
