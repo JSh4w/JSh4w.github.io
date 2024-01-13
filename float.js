@@ -42,6 +42,11 @@ function hexDec(ew, mw, h) {
     if (x.length !== ew + mw + 1) {
         throw new Error("Invalid length");
     }
+
+    if (document.getElementById("TF32").disabled === true){
+        x=x.substring(1);
+    }
+
     const e = x.substring(1, ew + 1);
     const m = x.substring(ew + 1);
     let exp = -Math.pow(2, ew - 1) + 1;
@@ -105,6 +110,20 @@ function convert() {
         ew=parseInt(ew);
         mw=parseInt(mw);
     }
+    if (document.getElementById("F16").disabled === true){
+        ew=5;
+        mw=10;
+    }else if (document.getElementById("F32").disabled === true){
+        ew=8;
+        mw=23;
+    }else if (document.getElementById("BF16").disabled === true){
+        ew=8;
+        mw=7;
+    }else if (document.getElementById("TF32").disabled === true){
+        ew=8;
+        mw=10;
+    }
+
     try {
         const result = hexDec(ew, mw, h);
         document.getElementById('result').value = result;
