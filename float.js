@@ -137,7 +137,7 @@ function convert() {
     try {
         const result = hexDec(ew, mw, h);
         document.getElementById('result').value = result;
-        hex_to_bin_colour(ew, mw, h);
+        //hex_to_bin_colour(ew, mw, h);
     } catch (e) {
         alert(e.message);
     }
