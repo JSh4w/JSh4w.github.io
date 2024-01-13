@@ -1,4 +1,4 @@
-const hex = {
+const hex_to_bin = {
     "0": "0000", "1": "0001", "2": "0010", "3": "0011", 
     "4": "0100", "5": "0101", "6": "0110", "7": "0111", 
     "8": "1000", "9": "1001", "a": "1010", "b": "1011", 
@@ -36,7 +36,7 @@ function selectType(type) {
 function hexDec(ew, mw, h) {
     let x = "";
     for (let a of h) {
-        x += hex[a];
+        x += hex_to_bin[a];
     }
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
@@ -49,7 +49,6 @@ function hexDec(ew, mw, h) {
     const m = x.substring(ew + 1);
     let exp = -Math.pow(2, ew - 1) + 1;
     let mant = 0;
-    
 
     // Check for zeros, infinities, and NaNs
     if (e === '0'.repeat(ew)) {
@@ -81,7 +80,7 @@ function hexDec(ew, mw, h) {
 function hex_to_bin_colour(ew, mw, h){
     let x = "";
     for (let a of h) {
-        x += hex[a];
+        x += hex+hex_to_bin[a];
     }
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
@@ -119,9 +118,6 @@ function convert() {
         }else if(hex_length===16){
             ew=11;
             mw=52;
-        }else{
-            alert("Non-standard hex length");
-        }
     }else{
         ew=parseInt(ew);
         mw=parseInt(mw);
@@ -144,7 +140,7 @@ function convert() {
         document.getElementById('result').value = result;
         //hex_to_bin_colour(ew, mw, h);
     } catch (e) {
-        alert(e.message);
+        document.getElementById('result').value = e.message;
     }
 }
 
