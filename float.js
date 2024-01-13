@@ -136,7 +136,7 @@ function convert() {
     try {
         const result = hexDec(ew, mw, h);
         document.getElementById('result').value = result;
-        hex_to_bin_colour(h);
+        hex_to_bin_colour(h,ew,mw);
     } catch (e) {
         alert(e.message);
     }
