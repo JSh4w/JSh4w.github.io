@@ -118,6 +118,7 @@ function convert() {
         }else if(hex_length===16){
             ew=11;
             mw=52;
+        }
     }else{
         ew=parseInt(ew);
         mw=parseInt(mw);
@@ -143,18 +144,3 @@ function convert() {
         document.getElementById('result').value = e.message;
     }
 }
-
-//// Display binary with color coding
-//function displayBinary(binary, ew, mw) {
-//    const sign = binary[0];
-//    const exponent = binary.substring(1, 1 + ew);
-//    const mantissa = binary.substring(1 + ew);
-//
-//    // Create color-coded HTML
-//    const binaryHTML = `<span class="signBit">${sign}</span>` +
-//                       `<span class="exponentBits">${exponent}</span>` +
-//                       `<span class="mantissaBits">${mantissa}</span>`;
-//
-//    // Display in an element
-//    document.getElementById('binaryDisplay').innerHTML = binaryHTML;
-//}
