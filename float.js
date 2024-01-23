@@ -152,7 +152,7 @@ function convert() {
 
 
 function twos_complement_to_dec(binStr) {
-    const isNeg = binStr.startsWith('1');
+    //const isNeg = binStr.startsWith('1');
     let neg_bin_val = binStr;
     if (isNeg){
         //switch the bits
@@ -179,4 +179,22 @@ function twos_complement_to_dec(binStr) {
         dec+=parseInt(result[i]) * Math.pow(2, dec.length -1 -i);
     }
     return isNeg ? -dec : dec;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const inputElement = document.getElementById('binaryInput');
+    const outputElement = document.getElementById('decimalOutput');
+    inputElement.addEventListener('input', function() {
+        const binStr = inputElement.value;
+        outputElement.textContent = twosComplementToDecimal(binStr);
+    });
+});
+
+
+function hexbin(hexStr){
+    let x = "";
+    for (let a of hexStr) {
+        x += hex_to_bin[a];
+    }
+    return x;
 }
