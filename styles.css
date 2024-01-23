@@ -20,7 +20,7 @@ body {
   justify-content: space-between; /* Places one box at each end and one in the middle */
   align-items: center; /* Aligns boxes vertically */
   height: 100vh; /* Full viewport height */
-  padding: 0 20px; /* Adds some space on the sides */
+ /* padding: 0 20px;  Adds some space on the sides */
 }
 .box {
   width: 100px; /* Width of each box */
