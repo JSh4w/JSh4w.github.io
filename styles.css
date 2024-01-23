@@ -23,8 +23,8 @@ body {
  /* padding: 0 20px;  Adds some space on the sides */
 }
 .box {
-  width: 100px; /* Width of each box */
-  height: 100px; /* Height of each box */
+  width: 300px; /* Width of each box */
+  height: 300px; /* Height of each box */
   background-color: lightblue; /* Background color */
   text-align: center; /* Center text horizontally */
   line-height: 100px; /* Center text vertically */
