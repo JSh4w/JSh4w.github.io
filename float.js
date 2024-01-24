@@ -151,8 +151,8 @@ function convert() {
 }
 
 document.getElementById('binaryInput').addEventListener('input', function() {
-    let binStr = this.value;
-    let decimal = convertBinaryToDecimal(binStr);
+    let input = this.value;
+    let decimal = convertBinaryToDecimal(input);
     document.getElementById('decimalOutput').textContent = decimal;
 });
 
@@ -185,7 +185,7 @@ function twos_complement_to_dec(binStr) {
         dec+=parseInt(result[i]) * Math.pow(2, dec.length -1 -i);
     }
     let output = isNeg ? -dec : dec;
-    document.getElementById('decimalOutput').textContent = output;
+    //document.getElementById('decimalOutput').textContent = output;
     return output
 }
 
