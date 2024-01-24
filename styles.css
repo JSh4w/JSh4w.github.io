@@ -31,5 +31,12 @@ body {
   border: 1px solid black; /* Box border */
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Creates three columns */
+  grid-template-rows: auto; /* Rows are set to automatically adjust to content */
+  gap: 10px; /* Spacing between grid items */
+}
+
 
   
