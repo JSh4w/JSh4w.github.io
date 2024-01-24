@@ -106,8 +106,6 @@ function hex_to_bin_colour(ew, h){
 }
 
 
-
-
 function convert() {
     var ew = document.getElementById('ew').value;
     var mw = document.getElementById('mw').value;
@@ -150,7 +148,6 @@ function convert() {
     }
 }
 
-
 function twos_complement_to_dec(binStr) {
     //const isNeg = binStr.startsWith('1');
     let neg_bin_val = binStr;
@@ -180,16 +177,6 @@ function twos_complement_to_dec(binStr) {
     }
     return isNeg ? -dec : dec;
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const inputElement = document.getElementById('binaryInput');
-    const outputElement = document.getElementById('decimalOutput');
-    inputElement.addEventListener('input', function() {
-        const binStr = inputElement.value;
-        outputElement.textContent = twosComplementToDecimal(binStr);
-    });
-});
-
 
 function hexbin(hexStr){
     let x = "";
