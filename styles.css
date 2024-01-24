@@ -37,7 +37,7 @@ color: blue;
 display: flex; /* Enables Flexbox */
 justify-content: space-between; /* Places one box at each end and one in the middle */
 align-items: center; /* Aligns boxes vertically */
-height: 40vh; /* Full viewport height */
+height: 100vh; /* Full viewport height */
 /* padding: 0 20px;  Adds some space on the sides */
 }
 .box {
