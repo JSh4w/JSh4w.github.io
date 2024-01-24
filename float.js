@@ -150,15 +150,10 @@ function convert() {
     }
 }
 
-document.getElementById('binaryInput').addEventListener('input', function() {
-    let input = this.value;
-    let decimal = convertBinaryToDecimal(input);
-    document.getElementById('decimalOutput').textContent = decimal;
-});
-
-function twos_complement_to_dec(binStr) {
+function twos_complement_to_dec() {
     //const isNeg = binStr.startsWith('1');
     //var binStr = document.getElementById('binaryInput').value;
+    var binStr = document.getElementById('binaryInput').value;
     let neg_bin_val = binStr;
     if (isNeg){
         //switch the bits
@@ -185,8 +180,9 @@ function twos_complement_to_dec(binStr) {
         dec+=parseInt(result[i]) * Math.pow(2, dec.length -1 -i);
     }
     let output = isNeg ? -dec : dec;
-    document.getElementById('decimalOutput').textContent = output;
-    return output
+    const decOutput=output;
+    document.getElementById('decOutput').value = decOutput;
+    //return output
 }
 
 function hexbin(hexStr){
