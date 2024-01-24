@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Mixed Float Point Hex to Decimal Converter</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="float.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
     <div id="Title">        
@@ -13,42 +13,46 @@
       Quite likely no one needs it 
       </p>
     </div>
-    <div  id="Mixed Precision floating point">
-      <div id="floatingPointSelector">
-        <button id="custom" onclick="selectType('custom')">Custom</button>
-        <button id="F16" onclick="selectType('F16')">F16</button>
-        <button id="F32" onclick="selectType('F32')">F32</button>
-        <button id="BF16" onclick="selectType('BF16')">BF16</button>
-        <button id="TF32" onclick="selectType('TF32')">TF32</button>
-      </div>
-      <div id="customInputs" style="display:none;">
-        <label for="ew">EW:</label>
-        <input type="number" id="ew" disabled><br><br>
-      
-        <label for="mw">MW:</label>
-        <input type="number" id="mw" disabled><br><br>
-      </div>
-    
-      <label for="h">Hex Value (h):</label>
-      <input type="text" id="h"><br><br>  
-    
-      <button onclick="convert()">Convert</button><br><br>
-      <label for="result">Result:</label>
-      <input type="text" id="result" readonly><br>
-      <br>
-    </div>
+    <div class="grid-container" id="calc-container">
+      <div class="grid-item" id="Mixed Precision floating point">
+        <div id="floatingPointSelector">
+          <button id="custom" onclick="selectType('custom')">Custom</button>
+          <button id="F16" onclick="selectType('F16')">F16</button>
+          <button id="F32" onclick="selectType('F32')">F32</button>
+          <button id="BF16" onclick="selectType('BF16')">BF16</button>
+          <button id="TF32" onclick="selectType('TF32')">TF32</button>
+        </div>
 
-    <div id="twos_complement">
-      <label for="binary_input">Binary input</label>
-      <input type="number" id="binaryInput" placeholder="Enter Binary Value" oninput="twos_complement_to_dec()"><br></br>
-      <label for="decOutput">Result:</label>
-      <input type="text" id="decOutput" readonly><br>
-    </div> 
-     
-    <div id="twos_com">
-      <p>
-        cant win maybe maybe 
-      </p>
+        <div id="customInputs" style="display:none;">
+          <label for="ew">EW:</label>
+          <input type="number" id="ew" disabled><br><br>
+        
+          <label for="mw">MW:</label>
+          <input type="number" id="mw" disabled><br><br>
+        </div>
+      
+        <label for="h">Hex Value (h):</label>
+        <input type="text" id="h"><br><br>  
+      
+        <button onclick="convert()">Convert</button><br><br>
+        <label for="result">Result:</label>
+        <input type="text" id="result" readonly><br>
+        <br>
+      </div>
+
+
+      <div class="grid-item" id="twos_complement">
+        <label for="binary_input">Binary input</label>
+        <input type="number" id="binaryInput" placeholder="Enter Binary Value"><br></br>
+        <p>Decimal output: <span id="decimalOutput"></span></p>
+      </div>  
+
+
+      <div class="grid-itme" id="twos_com">
+        <p>
+          testing box 3
+        </p>
+      </div>
     </div>
   </body>
 </html>
