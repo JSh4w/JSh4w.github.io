@@ -16,6 +16,40 @@ body {
   color: blue; 
 }
 
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 50px;
+}
+.signBit { 
+  color: red; 
+}
+.exponentBits {
+  color: green; 
+}
+.mantissaBits {
+color: blue; 
+}
+.container {
+display: flex; /* Enables Flexbox */
+justify-content: space-between; /* Places one box at each end and one in the middle */
+align-items: center; /* Aligns boxes vertically */
+height: 40vh; /* Full viewport height */
+/* padding: 0 20px;  Adds some space on the sides */
+}
+.box {
+width: 300px; /* Width of each box */
+height: 300px; /* Height of each box */
+background-color: lightblue; /* Background color */
+text-align: center; /* Center text horizontally */
+line-height: 100px; /* Center text vertically */
+border: 1px solid black; /* Box border */
+}
+
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Creates three columns */
