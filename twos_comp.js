@@ -1,5 +1,6 @@
-function twos_complement_to_dec(binStr) {
+function twos_complement_to_dec() {
     //const isNeg = binStr.startsWith('1');
+    var binStr= document.getElementById("binaryInput"),value;
     let neg_bin_val = binStr;
     if (isNeg){
         //switch the bits
@@ -25,17 +26,19 @@ function twos_complement_to_dec(binStr) {
     for (let i=0; i< result.length; i++){
         dec+=parseInt(result[i]) * Math.pow(2, dec.length -1 -i);
     }
-    return isNeg ? -dec : dec;
+    var output = isNeg ? -dec : dec;
+    document.getElementById('decimalOutput').textContent = output;
+     
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const inputElement = document.getElementById('binaryInput');
-    const outputElement = document.getElementById('decimalOutput');
-    inputElement.addEventListener('input', function() {
-        const binStr = inputElement.value;
-        outputElement.textContent = twosComplementToDecimal(binStr);
-    });
-});
+//document.addEventListener('DOMContentLoaded', function() {
+//    const inputElement = document.getElementById('binaryInput');
+//    const outputElement = document.getElementById('decimalOutput');
+//    inputElement.addEventListener('input', function() {
+//        const binStr = inputElement.value;
+//        outputElement.textContent = twosComplementToDecimal(binStr);
+//    });
+//});
 
 
 function hexbin(hexStr){
