@@ -34,28 +34,16 @@ h1 {
 color: blue; 
 }
 .container {
-display: flex; /* Enables Flexbox */
-justify-content: space-between; /* Places one box at each end and one in the middle */
-align-items: center; /* Aligns boxes vertically */
-height: 100vh; /* Full viewport height */
-/* padding: 0 20px;  Adds some space on the sides */
-}
-.box {
-width: 300px; /* Width of each box */
-height: 300px; /* Height of each box */
-background-color: lightblue; /* Background color */
-text-align: center; /* Center text horizontally */
-line-height: 100px; /* Center text vertically */
-border: 1px solid black; /* Box border */
+    display: flex; /* Enables Flexbox */
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+    justify-content: center; /* Centers items horizontally in the container */
+    align-items: center; /* Aligns items vertically in their line */
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Adds some space on the sides */
+    gap: 10px; /* Optional: Adds space between flex items */
 }
 
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Creates three columns */
-  grid-template-rows: auto; /* Rows are set to automatically adjust to content */
-  gap: 10px; /* Spacing between grid items */
+.item {
+    flex-basis: calc(33.333% - 40px); /* Sets the base size of each item to a third of the container width, minus the total horizontal gap */
+    /* Other styling for your items */
 }
-
-
-  
