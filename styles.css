@@ -39,8 +39,8 @@ color: blue;
     justify-content: center; /* Centers items horizontally in the container */
     align-items: center; /* Aligns items vertically in their line */
     height: 100vh; /* Full viewport height */
-    padding: 0 20px; /* Adds some space on the sides */
-    gap: 10px; /* Optional: Adds space between flex items */
+    padding: 0 50px; /* Adds some space on the sides */
+    gap: 1px; /* Optional: Adds space between flex items */
 }
 
 .item {
