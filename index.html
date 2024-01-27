@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Mixed Float Point Hex to Decimal Converter</title>
     <script src="float.js"></script>
+    <script src="twos_comp.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
@@ -44,15 +45,16 @@
       </div>
 
 
-      <div type="row" id="row2">
+      <div type="item" id="twos complement">
         <p>This will be for twos complement</p>
-
-
-
+        <label for="binaryInput">Binary input</label>
+        <input type="text" id="binaryInput" dir="rtl" oninput="call_twos_to_dec()"><br></br>
+        <label for="decimalOutput">Decimal output</label>
+        <input type="text" id="decimalOutput" readonly><br>
       </div>
 
 
-      <div type="row" id="row3">
+      <div type="item" id="hex to binary">
         <p>This will be for hex to binary</p>
 
 
