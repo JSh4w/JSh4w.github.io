@@ -32,16 +32,6 @@ function twos_complement_to_dec() {
      
 }
 
-//document.addEventListener('DOMContentLoaded', function() {
-//    const inputElement = document.getElementById('binaryInput');
-//    const outputElement = document.getElementById('decimalOutput');
-//    inputElement.addEventListener('input', function() {
-//        const binStr = inputElement.value;
-//        outputElement.textContent = twosComplementToDecimal(binStr);
-//    });
-//});
-
-
 function hexbin(hexStr){
     let x = "";
     for (let a of hexStr) {

@@ -8,55 +8,56 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <div id="Title">        
-      <h1>Mixed Precision Floating Point Calculator</h1>
-      <p>A fun little project that seems to have gone under the radar of the online hardware coding community.
-      Quite likely no one needs it 
-      </p>
-    </div>
-    <div class="container" id="calc-container">
-      <div class="item" id="Mixed Precision floating point">
-        <div id="floatingPointSelector">
-          <button id="custom" onclick="selectType('custom')">Custom</button>
-          <button id="F16" onclick="selectType('F16')">F16</button>
-          <button id="F32" onclick="selectType('F32')">F32</button>
-          <button id="BF16" onclick="selectType('BF16')">BF16</button>
-          <button id="TF32" onclick="selectType('TF32')">TF32</button>
-        </div>
-
-        <div id="customInputs" style="display:none;">
-          <label for="ew">EW:</label>
-          <input type="number" id="ew" disabled><br><br>
-        
-          <label for="mw">MW:</label>
-          <input type="number" id="mw" disabled><br><br>
-        </div>
+    <div class="container" id="Layout">
       
-        <label for="h">Hex Value (h):</label>
-        <input type="text" id="h"><br><br>  
-      
-        <button onclick="convert()">Convert</button><br><br>
-        <label for="result">Result:</label>
-        <input type="text" id="result" readonly><br>
-        <br>
-      </div>
-
-
-      <div class="item" id="twos_complement">
-        <label for="binaryInput">Binary input</label>
-        <input type="text" id="binaryInput" placeholder="Enter Binary Value" oninput="twos_complement_to_dec()"><br></br>
-        <label for="decimalOutput">Decimal output</label>
-        <input type="text" id="decimalOutput" readonly><br>
-      </div>  
-
-
-      <div class="item" id="twos_com">
-        <p>
-          testing box latest
+      <div class="header" id="Header">
+        <h1>Mixed Precision Floating Point Calculator</h1>
+        <p>A fun little project that seems to have gone under the radar of the online hardware coding community.
+        Quite likely no one needs it 
         </p>
+      </div>        
+
+      <div class="row" id="First Row">
+        <div class="item" id="Mixed Precision floating point">
+          <div id="floatingPointSelector">
+            <button id="custom" onclick="selectType('custom')">Custom</button>
+            <button id="F16" onclick="selectType('F16')">F16</button>
+            <button id="F32" onclick="selectType('F32')">F32</button>
+            <button id="BF16" onclick="selectType('BF16')">BF16</button>
+            <button id="TF32" onclick="selectType('TF32')">TF32</button>
+          </div>
+          <div id="customInputs" style="display:none;">
+            <label for="ew">EW:</label>
+            <input type="number" id="ew" disabled><br><br>
+          
+            <label for="mw">MW:</label>
+            <input type="number" id="mw" disabled><br><br>
+          </div>
+        
+          <label for="h">Hex Value (h):</label>
+          <input type="text" id="h"><br><br>  
+        
+          <button onclick="convert()">Convert</button><br><br>
+          <label for="result">Result:</label>
+          <input type="text" id="result" readonly><br>
+          <br>
+        </div>
+
+  
+        <div class="item" id="twos_complement">
+          <label for="binaryInput">Binary input</label>
+          <input type="text" id="binaryInput" placeholder="Enter Binary Value" oninput="twos_complement_to_dec()"><br></br>
+          <label for="decimalOutput">Decimal output</label>
+          <input type="text" id="decimalOutput" readonly><br>
+        </div>  
+
+  
+        <div class="item" id="twos_com">
+          <p>
+            testing box latest
+          </p>
+        </div>
       </div>
-    </div>
-    <div id="binaryDisplay"> 
 
     </div>
   </body>
