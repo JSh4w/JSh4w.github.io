@@ -1,6 +1,6 @@
 import { hex_to_bin } from './hexconv.js';
 
-indow.onload = function() {
+window.onload = function() {
     selectType('custom'); // Select 'custom' on page load
 };
 
@@ -99,9 +99,6 @@ function hex_to_bin_colour(ew, h){
     
     //displayElement.innerHTML = `<span class="signBit">${sign}</span><span class="exponentBits">${exponent}</span><span class="mantissaBits">${mantissa}</span>`;
 }
-
-
-
 
 function convert() {
     var ew = document.getElementById('ew').value;

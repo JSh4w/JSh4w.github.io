@@ -11,13 +11,3 @@ function hexbin(){
     }
     document.getElementById('binOut').value = hexIn;
 }
-
-//function call_hexbin(){
-//    var hexIn= document.getElementById("hexIn").value;
-//    try {
-//        const result = hexbin(hexIn);
-//        document.getElementById('binOut').value = result;
-//    } catch (e) {
-//        document.getElementById('binOut').value = e.message;
-//    }
-//}
