@@ -5,7 +5,8 @@ const hex_to_bin = {
     "c": "1100", "d": "1101", "e": "1110", "f": "1111"
 };
 
-function hexbin(hexIn){
+function hexbin(){
+    var hexIn= document.getElementById("hexIn").value;
     let x = "";
     hexIn = hexIn.toLowerCase(); // Convert input to lowercase
     for (let a of hexIn) {
@@ -15,15 +16,15 @@ function hexbin(hexIn){
             throw new Error("Invalid hexadecimal character: " + a);
         }
     }
-    return x;
+    document.getElementById('binOut').value = hexIn;
 }
 
-function call_hexbin(){
-    var hexIn= document.getElementById("hexIn").value;
-    try {
-        const result = hexbin(hexIn);
-        document.getElementById('binOut').value = result;
-    } catch (e) {
-        document.getElementById('binOut').value = e.message;
-    }
-}
+//function call_hexbin(){
+//    var hexIn= document.getElementById("hexIn").value;
+//    try {
+//        const result = hexbin(hexIn);
+//        document.getElementById('binOut').value = result;
+//    } catch (e) {
+//        document.getElementById('binOut').value = e.message;
+//    }
+//}
