@@ -32,15 +32,4 @@ function twos_to_dec() {
      
 }
 
-function test(){
-    var str= document.getElementById("binaryInput").value;
-    document.getElementById("decimalOutput").value= str;
-}
 
-function hexbin(hexStr){
-    let x = "";
-    for (let a of hexStr) {
-        x += hex_to_bin[a];
-    }
-    return x;
-}
