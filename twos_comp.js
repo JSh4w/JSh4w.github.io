@@ -1,6 +1,7 @@
 function twos_complement_to_dec() {
     //const isNeg = binStr.startsWith('1');
-    var binStr= document.getElementById("binaryInput"),value;
+    var binStr= document.getElementById("binaryInput").value;
+    binStr = binStr.replace(/[^01]/g, '');
     let neg_bin_val = binStr;
     if (isNeg){
         //switch the bits
