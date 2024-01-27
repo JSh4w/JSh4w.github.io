@@ -18,25 +18,25 @@ color: blue;
 .container {
   display: flex; /* Enables Flexbox */
   flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
-  /*justify-content: center;  Centers items horizontally in the container */
-  align-items: center;
   flex-direction: column; 
+  align-items: center;
   height: 100vh; /* Full viewport height */
-  padding: 0 50px; /* Adds some space on the sides */
   gap: 1px; /* Optional: Adds space between flex items */
 }
 .header{
-width:100%;
-text-align: center;
-padding: 10px;
-margin-bottom: 20px;
+  width:100%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
 }
+
 .row{
-display: flex;
-justify-content: space-between;
-width: 100%;
-margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
 }
+
 .item {
   flex-basis: calc(33.333% - 20px); /* Sets the base size of each item to a third of the container width, minus the total horizontal gap */
   /* Other styling for your items */
