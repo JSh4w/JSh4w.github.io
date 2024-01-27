@@ -1,4 +1,4 @@
-function twos_complement_to_dec() {
+function twos_to_dec() {
     //const isNeg = binStr.startsWith('1');
     var binStr= document.getElementById("binaryInput").value;
     binStr = binStr.replace(/[^01]/g, '');
@@ -28,7 +28,7 @@ function twos_complement_to_dec() {
         dec+=parseInt(result[i]) * Math.pow(2, dec.length -1 -i);
     }
     var output = isNeg ? -dec : dec;
-    document.getElementById('decimalOutput').textContent = output;
+    document.getElementById('decimalOutput').value = output;
      
 }
 
