@@ -45,7 +45,7 @@
   
         <div class="item" id="twos_complement">
           <label for="binaryInput">Binary input</label>
-          <input type="text" id="binaryInput" placeholder="Enter Binary Value" oninput="twos_to_dec()"><br></br>
+          <input type="text" id="binaryInput" placeholder="Enter Binary Value" oninput="call_twos_to_dec()"><br></br>
           <label for="decimalOutput">Decimal output</label>
           <input type="text" id="decimalOutput" readonly><br>
         </div>  
@@ -55,10 +55,12 @@
   
         <div class="item" id="hex_to_bin">
           <label for="hexIn">Hexadecimal Input</label>
-          <input type="text" id="hexIn" placeholder="Enter Binary Value" oninput="hexbin()"><br></br>
+          <input type="text" id="hexIn" placeholder="Enter Binary Value" oninput="call_hexbin()"><br></br>
           <label for="binOut">Decimal output</label>
           <input type="text" id="binOut" readonly><br>
         </div>
+
+        <script src="hex_convert.js"></script>
       </div>
 
     </div>
