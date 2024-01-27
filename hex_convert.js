@@ -19,7 +19,7 @@ function call_hexbin(){
     try {
         const result = hexbin(hexIn);
         document.getElementById('binOut').value = result;
-  } catch (e) {
+    } catch (e) {
         document.getElementById('binOut').value = e.message;
     }
 }
