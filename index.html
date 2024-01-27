@@ -17,7 +17,7 @@
         </p>
       </div>
       <div type="row" id="row1">
-        <div type="item"> 
+        <div type="item" id="floating point conversion"> 
           <div id="floatingPointSelector">
             <button id="custom" onclick="selectType('custom')">Custom</button>
             <button id="F16" onclick="selectType('F16')">F16</button>
@@ -43,26 +43,25 @@
           <br>
            <div id="binaryDisplay"> 
           </div>
+        </div>
+
+        <div type="item" id="twos complement">
+          <p>This will be for twos complement</p>
+          <label for="binaryInput">Binary input</label>
+          <input type="text" id="binaryInput" dir="rtl" oninput="call_twos_to_dec()"><br></br>
+          <label for="decimalOutput">Decimal output</label>
+          <input type="text" id="decimalOutput" readonly><br>
+        </div>
+
+
+        <div type="item" id="hex to binary">
+          <p>This will be for hex to binary</p>
+          <label for="hexInput">Hex input</label>
+          <input type="text" id="hhexInput" oninput="call_hex_bin()"><br></br>
+          <label for="binOutput">Binary output</label>
+          <input type="text" id="binOutput" readonly><br>
+        </div>
       </div>
-
-
-      <div type="item" id="twos complement">
-        <p>This will be for twos complement</p>
-        <label for="binaryInput">Binary input</label>
-        <input type="text" id="binaryInput" dir="rtl" oninput="call_twos_to_dec()"><br></br>
-        <label for="decimalOutput">Decimal output</label>
-        <input type="text" id="decimalOutput" readonly><br>
-      </div>
-
-
-      <div type="item" id="hex to binary">
-        <p>This will be for hex to binary</p>
-        <label for="hexInput">Hex input</label>
-        <input type="text" id="hhexInput" oninput="call_hex_bin()"><br></br>
-        <label for="binOutput">Binary output</label>
-        <input type="text" id="binOutput" readonly><br>
-      </div>
-
     </div>
   </body>
 </html>
