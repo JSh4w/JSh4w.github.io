@@ -7,10 +7,14 @@ const hex_to_bin = {
 
 function hexbin(hexIn){
     let x = "";
+    hexIn = hexIn.toLowerCase(); // Convert input to lowercase
     for (let a of hexIn) {
-        x += hex_to_bin[a];
+        if (hex_to_bin.hasOwnProperty(a)) {
+            x += hex_to_bin[a];
+        } else {
+            throw new Error("Invalid hexadecimal character: " + a);
+        }
     }
-    //document.getElementById('binOut').value = x;
     return x;
 }
 

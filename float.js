@@ -34,12 +34,6 @@ function selectType(type) {
 }
 
 function hexDec(ew, mw, h) {
-
-    const nonHexRegex = /[^0-9A-Fa-f]/;
-    if (nonHexRegex.test(h)) {
-        throw new Error("String contains non-hexadecimal characters.");
-    }
-
     let x = "";
     for (let a of h) {
         x += hex_to_bin[a];
@@ -52,7 +46,6 @@ function hexDec(ew, mw, h) {
     if (x.length !== ew + mw + 1) {
         throw new Error("Invalid Inputs");
     }
-
     const sign = x[0];
     const e = x.substring(1, ew + 1);
     const m = x.substring(ew + 1);
