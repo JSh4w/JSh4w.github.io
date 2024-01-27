@@ -17,10 +17,11 @@ function hexbin(hexIn){
 
 function call_hex_bin(){
     var binStr= document.getElementById("hexInput").value;
-    try{
-        const result = hexbin(binStr);
-        document.getElementById("binOutput").value= result;
-    } catch (e) {
-        document.getElementById("binOutput").value= e.message;
-    }
+    document.getElementById("binOutput").value= binStr;
+    //try{
+    //    const result = hexbin(binStr);
+    //    document.getElementById("binOutput").value= result;
+    //} catch (e) {
+    //    document.getElementById("binOutput").value= e.message;
+    //s}
 }
