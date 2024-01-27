@@ -5,6 +5,7 @@
     <title>Mixed Float Point Hex to Decimal Converter</title>
     <script src="float.js"></script>
     <script src="twos_comp.js"></script>
+    <script src="hex_convert.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
@@ -56,9 +57,10 @@
 
       <div type="item" id="hex to binary">
         <p>This will be for hex to binary</p>
-
-
-
+        <label for="hexInput">Hex input</label>
+        <input type="text" id="hhexInput" oninput="call_hex_bin()"><br></br>
+        <label for="binOutput">Binary output</label>
+        <input type="text" id="binOutput" readonly><br>
       </div>
 
     </div>

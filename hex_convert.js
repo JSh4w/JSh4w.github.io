@@ -5,16 +5,22 @@ const hex_to_bin = {
     "c": "1100", "d": "1101", "e": "1110", "f": "1111"
 };
 
-function hexbin(){
+function hexbin(hexIn){
     var hexIn= document.getElementById("hexIn").value;
     let x = "";
     hexIn = hexIn.toLowerCase(); // Convert input to lowercase
     for (let a of hexIn) {
-        if (hex_to_bin.hasOwnProperty(a)) {
-            x += hex_to_bin[a];
-        } else {
-            throw new Error("Invalid hexadecimal character: " + a);
-        }
+         x += hex_to_bin[a];
     }
-    document.getElementById('binOut').value = hexIn;
+    return x;
+}
+
+function call_hex_bin(){
+    var binStr= document.getElementById("hexInput").value;
+    try{
+        const result = hexbin(binStr);
+        document.getElementById("binOutput").value= result;
+    } catch (e) {
+        document.getElementById("binOutput").value= e.message;
+    }
 }

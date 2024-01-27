@@ -40,5 +40,4 @@ function call_twos_to_dec(){
     } catch (e) {
         document.getElementById("decimalOutput").value= e.message;
     }
-
 }
