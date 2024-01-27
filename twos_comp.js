@@ -28,8 +28,11 @@ function twos_to_dec() {
         dec+=parseInt(result[i]) * Math.pow(2, dec.length -1 -i);
     }
     var output = isNeg ? -dec : dec;
-    document.getElementById('decimalOutput').value = output;
+    document.getElementById("decimalOutput").value= binStr;
      
 }
 
-
+function test(){
+    var str= document.getElementById("binaryInput").value;
+    document.getElementById("decimalOutput").value= str;
+}
