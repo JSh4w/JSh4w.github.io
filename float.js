@@ -91,22 +91,16 @@ function hex_to_bin_colour(ew, h){
     }
     var sign = x[0];
     var e = x.substring(1, ew + 1);
-    var m = x.substring(ew + 1);
+    var m = x.substring(ew + 1, ew+mw);
      // Display in an element
-    //document.getElementById('binaryDisplay').innerHTML = sign+e+m;
     //    Create color-coded HTML
     const binaryHTML = `<span class="signBit">${sign}</span>` +
                       `<span class="exponentBits">${e}</span>` +
                        `<span class="mantissaBits">${m}</span>`;
    // Display in an element
     return binaryHTML;
-    //document.getElementById('binaryDisplay').innerHTML = binaryHTML;
-    
-    //displayElement.innerHTML = `<span class="signBit">${sign}</span><span class="exponentBits">${exponent}</span><span class="mantissaBits">${mantissa}</span>`;
+
 }
-
-
-
 
 function convert() {
     var ew = document.getElementById('ew').value;
