@@ -1,10 +1,3 @@
-const hex_to_bin = {
-    "0": "0000", "1": "0001", "2": "0010", "3": "0011", 
-    "4": "0100", "5": "0101", "6": "0110", "7": "0111", 
-    "8": "1000", "9": "1001", "a": "1010", "b": "1011", 
-    "c": "1100", "d": "1101", "e": "1110", "f": "1111"
-};
-
 window.onload = function() {
     selectType('custom'); // Select 'custom' on page load
 };
@@ -35,9 +28,16 @@ function selectType(type) {
 
 function hexDec(ew, mw, h) {
     let x = "";
-    for (let a of h) {
-        x += hex_to_bin[a];
+
+    //convert h, the hexadecimal input into binary
+    for (var i = 0; i < h.length; i++) {
+        var binDigit = parseInt(h[i], 16).toString(2);
+        // Pad with zeros to ensure 4 bits per hex digit
+        binDigit = binDigit.padStart(4, '0');
+        x += binDigit;
     }
+
+    //take off first bit for TF32 as only 19 bits long
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
     }else if (ew+mw+1 !==x.length){
@@ -81,22 +81,28 @@ function hexDec(ew, mw, h) {
 
 function hex_to_bin_colour(ew, h){
     let x = "";
-    for (let a of h) {
-        x += hex_to_bin[a];
+
+    for (var i = 0; i < h.length; i++) {
+        var binDigit = parseInt(h[i], 16).toString(2);
+        // Pad with zeros to ensure 4 bits per hex digit
+        binDigit = binDigit.padStart(4, '0');
+        x += binDigit;
     }
+
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
     }else if (ew+mw+1 !==x.length){
         x=x.substring(x.length-ew-mw-1);
     }
-    var sign = x[0];
-    var e = x.substring(1, ew + 1);
-    var m = x.substring(ew + 1);
+    let colour_x=x.substring(x.length-ew-mw-1);
+    var sign_2 = colour_x[0];
+    var e_2 = colour_x.substring(1, ew + 1);
+    var m_2 = colour_x.substring(ew + 1);
      // Display in an element
     //    Create color-coded HTML
-    const binaryHTML = `<span class="signBit">${sign}</span>` +
-                      `<span class="exponentBits">${e}</span>` +
-                       `<span class="mantissaBits">${m}</span>`;
+    const binaryHTML = `<span class="signBit">${sign_2}</span>` +
+                      `<span class="exponentBits">${e_2}</span>` +
+                       `<span class="mantissaBits">${m_2}</span>`;
    // Display in an element
     return binaryHTML;
 
@@ -143,3 +149,4 @@ function convert() {
         document.getElementById('result').value = e.message;
     }
 }
+
