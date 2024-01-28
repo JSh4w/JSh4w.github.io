@@ -86,8 +86,6 @@ function hex_to_bin_colour(ew, h){
     }
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
-    }else if (ew+mw+1 !==x.length){
-    x=x.substring(x.length-ew-mw-1);
     }
     var sign = x[0];
     var e = x.substring(1, ew + 1);
