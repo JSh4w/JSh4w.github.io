@@ -14,7 +14,7 @@ function hexbin(hexIn){
     }
     return x;
 }
-
+ 
 function call_hex_bin(){
     var binStr= document.getElementById("hexInput").value;
     const result = binStr;

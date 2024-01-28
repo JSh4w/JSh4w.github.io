@@ -9,15 +9,15 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <div type="container" id="calc-container">
-      <div type="header" id="header">
+    <div class="container" id="calc-container">
+      <div class="header" id="header">
         <h1>Mixed Precision Floating Point Calculator</h1>
         <p>A fun little project that seems to have gone under the radar of the online hardware coding community.
         Quite likely no one needs it 
         </p>
       </div>
-      <div type="row" id="row1">
-        <div type="item" id="floating point conversion"> 
+      <div class="row" id="row1">
+        <div class="item" id="floating point conversion"> 
           <div id="floatingPointSelector">
             <button id="custom" onclick="selectType('custom')">Custom</button>
             <button id="F16" onclick="selectType('F16')">F16</button>
@@ -45,7 +45,7 @@
           </div>
         </div>
 
-        <div type="item" id="twos complement">
+        <div class="item" id="twos complement">
           <p>This will be for twos complement</p>
           <label for="binaryInput">Binary input</label>
           <input type="text" id="binaryInput" dir="rtl" oninput="call_twos_to_dec()"><br></br>
@@ -54,10 +54,10 @@
         </div>
 
 
-        <div type="item" id="hex to binary">
+        <div class="item" id="hex to binary">
           <p>This will be for hex to binary</p>
           <label for="hexInput">Hex input</label>
-          <input type="text" id="hexInput" oninput="call_twos_to_dec()"><br></br>
+          <input type="text" id="hexInput" oninput="call_bin_hex()"><br></br>
           <label for="binOutput">Binary output</label>
           <input type="text" id="binOutput" readonly><br>
         </div>
