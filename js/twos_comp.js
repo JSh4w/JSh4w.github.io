@@ -1,5 +1,6 @@
 function twos_to_dec(binStr) {
     binStr = binStr.replace(/[^01]/g, '');
+    document.getElementById("binaryInput").value=binStr;
 
     const isNeg = binStr.startsWith('1');
     let result = binStr;

@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Floating Point Conversions and Tools</title>
-    <script type="module" src="./js/float.js"></script>
+    <script src="./js/float.js"></script>
     <script src="./js/twos_comp.js"></script>
+    <script src="./js/hex_convert.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
@@ -54,26 +55,30 @@
         <div class="item" id="hex-to-binary">
           <p>This will be for hex to binary</p>
           <label for="hexInput">Hex input</label>
-          <script>
-            function call_hex_bin() {
-              var hexStr = document.getElementById("hexInput").value;
-              var binStr = '';
-    
-              for (var i = 0; i < hexStr.length; i++) {
-              var binDigit = parseInt(hexStr[i], 16).toString(2);
-
-              binDigit = binDigit.padStart(4, '0');
-              binStr += binDigit;
-              }
-
-              document.getElementById("binOutput").value = binStr;
-            }
-          </script>
-          <input type="text" id="hexInput" oninput="call_hex_bin()"><br><br>
+          <input type="text" id="hexInput" oninput="call_hex_bin_row1()"><br><br>
           <label for="binOutput">Binary output</label>
           <input type="text" id="binOutput" readonly><br>
-      </div>
+        </div>
+
+        
       </div>
     </div>
   </body>
 </html>
+
+
+//<script>
+//  function call_hex_bin() {
+//    var hexStr = document.getElementById("hexInput").value;
+//    var binStr = '';
+//
+//    for (var i = 0; i < hexStr.length; i++) {
+//    var binDigit = parseInt(hexStr[i], 16).toString(2);
+//
+//    binDigit = binDigit.padStart(4, '0');
+//    binStr += binDigit;
+//    }
+//
+//    document.getElementById("binOutput").value = binStr;
+//  }
+//</script>
