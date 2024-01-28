@@ -107,7 +107,7 @@ function hex_to_bin_colour(ew,mw,h){
 
 }
 
-function convert() {
+export function convert() {
     var ew = document.getElementById('ew').value;
     var mw = document.getElementById('mw').value;
     const h = document.getElementById('h').value.toLowerCase();
