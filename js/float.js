@@ -79,7 +79,7 @@ function hexDec(ew, mw, h) {
     return s * Math.pow(2, exp) * mant;
 }
 
-function hex_to_bin_colour(ew, h){
+function hex_to_bin_colour(ew,mw,h){
     let x = "";
 
     for (var i = 0; i < h.length; i++) {
@@ -94,10 +94,9 @@ function hex_to_bin_colour(ew, h){
     }else if (ew+mw+1 !==x.length){
         x=x.substring(x.length-ew-mw-1);
     }
-    let colour_x=x.substring(x.length-ew-mw-1);
-    var sign_2 = colour_x[0];
-    var e_2 = colour_x.substring(1, ew + 1);
-    var m_2 = colour_x.substring(ew + 1);
+    var sign_2 = x[0];
+    var e_2 = x.substring(1, ew + 1);
+    var m_2 = x.substring(ew + 1);
      // Display in an element
     //    Create color-coded HTML
     const binaryHTML = `<span class="signBit">${sign_2}</span>` +
@@ -144,7 +143,7 @@ function convert() {
     try {
         const result = hexDec(ew, mw, h);
         document.getElementById('result').value = result;
-        document.getElementById('binaryDisplay').innerHTML = hex_to_bin_colour(ew, h);
+        document.getElementById('binaryDisplay').innerHTML = hex_to_bin_colour(ew,mw,h);
     } catch (e) {
         document.getElementById('result').value = e.message;
     }
