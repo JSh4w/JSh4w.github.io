@@ -34,10 +34,8 @@ function selectType(type) {
 }
 
 function hexDec(ew, mw, h) {
-    let x = "";
-    for (let a of h) {
-        x += hex_to_bin[a];
-    }
+    var binStr = parseInt(h, 16).toString(2);
+    let x=binStr;
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
     }else if (ew+mw+1 !==x.length){
