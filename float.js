@@ -40,7 +40,7 @@ function hexDec(ew, mw, h) {
     }
     if (document.getElementById("TF32").disabled === true){
         x=x.substring(1);
-    }else if (ew+mw+1 !==x.length && document.getElementById('custom').disabled === true){
+    }else if (ew+mw+1 !==x.length){
         x=x.substring(x.length-ew-mw-1);
     }
     if (x.length !== ew + mw + 1) {
