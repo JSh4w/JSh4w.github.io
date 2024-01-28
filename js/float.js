@@ -13,6 +13,7 @@ function selectType(type) {
     document.getElementById('F32').disabled = false;
     document.getElementById('BF16').disabled = false;
     document.getElementById('TF32').disabled = false;
+    document.getElementById('F64').disabled = false;
 
     // Enable inputs and set the button to selected state for 'custom'
     if (type === 'custom') {
@@ -139,6 +140,9 @@ function convert() {
     }else if (document.getElementById("TF32").disabled === true){
         ew=8;
         mw=10;
+    }else if (document.getElementById("F64").disabled === true){
+        ew=11;
+        mw=52;
     }
     try {
         const result = hexDec(ew, mw, h);

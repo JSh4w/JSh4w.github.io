@@ -17,11 +17,18 @@
       <div class="row" id="row_1">
         <div class="item" id="floating point conversion"> 
           <div id="floatingPointSelector"> 
+            <p>
+              This is for floating point conversions. Custom is for setting desired exponent widths "ew" and mantissa widths "mw". 
+              The output is given in decimal and coloured binary beneath. 
+              If "ew" and "mw" are empty the hexadecimal input asssume F16, F32 or F64 inputs 
+            </p>
             <button id="custom" onclick="selectType('custom')">Custom</button>
             <button id="F16" onclick="selectType('F16')">F16</button>
             <button id="F32" onclick="selectType('F32')">F32</button>
             <button id="BF16" onclick="selectType('BF16')">BF16</button>
             <button id="TF32" onclick="selectType('TF32')">TF32</button>
+            <button id="F64" onclick="selectType('F64')">F64</button>
+
           </div>
         
           <div id="customInputs">
@@ -44,7 +51,7 @@
         </div>
 
         <div class="item" id="twos complement">
-          <p>This will be for twos complement</p>
+          <p>This returns the decimal value for an input in twos complement form</p>
           <label for="binaryInput">Binary input</label>
           <input type="text" id="binaryInput" dir="rtl" oninput="call_twos_to_dec()"><br></br>
           <label for="decimalOutput">Decimal output</label>
@@ -53,14 +60,14 @@
 
 
         <div class="item" id="hex-to-binary">
-          <p>This will be for hex to binary</p>
+          <p>This just converts hexadecimal to binary for quick checksy</p>
           <label for="hexInput">Hex input</label>
           <input type="text" id="hexInput" oninput="call_hex_bin_row1()"><br><br>
           <label for="binOutput">Binary output</label>
-          <input type="text" id="binOutput" readonly><br>
+          <input type="text" id="binOutput" maxlength="32" readonly><br>
         </div>
 
-        
+
       </div>
     </div>
   </body>
