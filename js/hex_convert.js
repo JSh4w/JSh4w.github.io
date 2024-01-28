@@ -3,8 +3,12 @@ function hex_bin_row1(hexStr) {
     for (var i = 0; i < hexStr.length; i++) {
         var binDigit = parseInt(hexStr[i], 16).toString(2);
         // Pad with zeros to ensure 4 bits per hex digit
+
+        //Change this to do colours similar to the way the binary is written for convert mmodule
+        //otherwise copy and paste is annoying with commas 
+
         binDigit = binDigit.padStart(4, '0');
-        binStr += binDigit;
+        binStr += binDigit + ",";
     }
     return binStr;
 }
