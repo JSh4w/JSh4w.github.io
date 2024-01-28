@@ -17,11 +17,6 @@ function hexbin(hexIn){
 
 function call_hex_bin(){
     var binStr= document.getElementById("hexInput").value;
-    document.getElementById("binOutput").value= binStr;
-    //try{
-    //    const result = hexbin(binStr);
-    //    document.getElementById("binOutput").value= result;
-    //} catch (e) {
-    //    document.getElementById("binOutput").value= e.message;
-    //s}
+    const result = binStr;
+    document.getElementById("binOutput").value= result;
 }
