@@ -89,7 +89,7 @@ function hex_to_bin_colour(ew, h){
     }
     var sign = x[0];
     var e = x.substring(1, ew + 1);
-    var m = x.substring(ew + 1, ew+mw);
+    var m = x.substring(ew + 1);
      // Display in an element
     //    Create color-coded HTML
     const binaryHTML = `<span class="signBit">${sign}</span>` +
