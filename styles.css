@@ -19,7 +19,7 @@ color: blue;
   display: flex; /* Enables Flexbox */
   flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 50vh; /* Full viewport height */
   gap: 1px; /* Optional: Adds space between flex items */
 }
 
