@@ -1,5 +1,6 @@
 body {
-  background-color: lightblue;
+  background-color: #f0f0f0 ;
+  border: 1px solid #ccc; 
 }
 
 h1 {
@@ -21,6 +22,7 @@ color: blue;
   align-items: center;
   height: 50vh; /* Full viewport height */
   gap: 1px; /* Optional: Adds space between flex items */
+  font-family: "Montserrat", sans-serif;
 }
 
 .header {
@@ -28,6 +30,15 @@ color: blue;
   text-align: center;
   padding: 10px;
   margin-bottom: 20px;
+  font: "Montserrat";
+}
+
+.h1{
+  font-weight: 700;
+}
+
+.p {
+  font-weight: 400;
 }
 
 .row {

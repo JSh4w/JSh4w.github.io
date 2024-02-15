@@ -12,7 +12,6 @@
     <div class="container" id="calc-container">
       <div class="header" id="header">
         <h1>Floating Point Conversions and Tools</h1>
-        <p>A series of tools for dealing with floating point values in day to day life</p>
       </div>
       <div class="row" id="row_1">
         <div class="item" id="floating point conversion"> 
@@ -60,7 +59,7 @@
 
 
         <div class="item" id="hex-to-binary">
-          <p>This just converts hexadecimal to binary for quick checksy</p>
+          <p>This just converts hexadecimal to binary for quick checks</p>
           <label for="hexInput">Hex input</label>
           <input type="text" id="hexInput" oninput="call_hex_bin_row1()"><br><br>
           <label for="binOutput">Binary output</label>
@@ -72,20 +71,3 @@
     </div>
   </body>
 </html>
-
-
-//<script>
-//  function call_hex_bin() {
-//    var hexStr = document.getElementById("hexInput").value;
-//    var binStr = '';
-//
-//    for (var i = 0; i < hexStr.length; i++) {
-//    var binDigit = parseInt(hexStr[i], 16).toString(2);
-//
-//    binDigit = binDigit.padStart(4, '0');
-//    binStr += binDigit;
-//    }
-//
-//    document.getElementById("binOutput").value = binStr;
-//  }
-//</script>
