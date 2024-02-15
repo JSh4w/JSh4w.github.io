@@ -1,6 +1,5 @@
 body {
   background-color: #f0f0f0 ;
-  border: 1px solid #ccc; 
 }
 
 h1 {
@@ -19,7 +18,7 @@ color: blue;
 .container {
   display: flex; /* Enables Flexbox */
   flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
-  align-items: center;
+  align-items: flex-start; /*can use center instead*/
   height: 50vh; /* Full viewport height */
   gap: 1px; /* Optional: Adds space between flex items */
   font-family: "Montserrat", sans-serif;
@@ -41,6 +40,13 @@ color: blue;
   font-weight: 400;
 }
 
+.button {
+  background: #333;
+  color: #fff;
+  border: none;
+}
+
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -55,3 +61,11 @@ color: blue;
   padding: 10px;
 }
 
+.input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+.output {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+}
