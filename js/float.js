@@ -110,8 +110,21 @@ function hex_to_bin_colour(ew,mw,h){
 
 function convert() {
     var ew = document.getElementById('ew').value;
+    if(ew<0){
+        ew=1
+        throw new Error("Exponent width must be > 1");
+    }
     var mw = document.getElementById('mw').value;
+    if(mw<0){
+        mw=1
+        throw new Error("Mantissa width must be > 1");
+    }
     const h = document.getElementById('h').value.toLowerCase();
+    const regex= /^(0x|0X)?[a-fA-F0-9]+$/;
+    if (!regex.test(h)){
+        throw new Error("Hexadecimal must be in the set a-f, 0-9");
+    }
+
     var hex_length= h.length;
     if (ew==='' && mw==='' && document.getElementById("custom").disabled===true){
         if(hex_length===4){

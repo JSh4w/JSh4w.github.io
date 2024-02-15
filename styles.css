@@ -57,7 +57,7 @@ color: blue;
 .item {
   flex-basis: calc(33.333% - 20px); /* Sets the base size of each item to a third of the container width, minus the total horizontal gap */
   /* Other styling for your items */
-  text-align: center;
+  text-align: flex-start;
   padding: 10px;
 }
 
