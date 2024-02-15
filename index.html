@@ -29,21 +29,22 @@
             <button id="F64" onclick="selectType('F64')">F64</button>
 
           </div>
-        
+          <br>
           <div id="customInputs">
             <label for="ew">EW:</label>
-            <input class="input" type="number" id="ew" disabled><br><br>
+            <input class="input" type="number" id="ew" size="3" disabled><br><br>
           
             <label for="mw">MW:</label>
-            <input class="input" type="number" id="mw" disabled><br><br>
+            <input class="input" type="number" id="mw" size="3" disabled><br><br>
           </div>
         
           <label for="h">Hex Value (h):</label>
-          <input class="input" type="text" id="h"><br><br>  
-        
+          <input class="input" type="text" id="h" size="16">
+          <br><br>  
+
           <button class="button" onclick="convert()">Convert</button><br><br>
           <label for="result">Result:</label>
-          <input class="output" type="text" id="result" readonly><br>
+          <input class="output" type="text" id="result" size="30"  readonly><br>
           <br>
            <div id="binaryDisplay"> 
           </div>
