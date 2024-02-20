@@ -6,11 +6,12 @@
     <script src="./js/float.js"></script>
     <script src="./js/twos_comp.js"></script>
     <script src="./js/hex_convert.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
     <div class="container" id="calc-container">
-      <div class="header" id="header">
+      <div class="light_header" id="header">
         <h1>Floating Point Conversions and Tools</h1>
       </div>
       <div class="row" id="row_1">
@@ -21,12 +22,12 @@
               The output is given in decimal and coloured binary beneath. 
               If "ew" and "mw" are empty the hexadecimal input asssume F16, F32 or F64 inputs 
             </p>
-            <button id="custom" onclick="selectType('custom')">Custom</button>
-            <button id="F16" onclick="selectType('F16')">F16</button>
-            <button id="F32" onclick="selectType('F32')">F32</button>
-            <button id="BF16" onclick="selectType('BF16')">BF16</button>
-            <button id="TF32" onclick="selectType('TF32')">TF32</button>
-            <button id="F64" onclick="selectType('F64')">F64</button>
+            <button class="grey_button" id="custom" onclick="selectType('custom')">Custom</button>
+            <button class="grey_button" id="F16" onclick="selectType('F16')">F16</button>
+            <button class="grey_button" id="F32" onclick="selectType('F32')">F32</button>
+            <button class="grey_button" id="BF16" onclick="selectType('BF16')">BF16</button>
+            <button class="grey_button" id="TF32" onclick="selectType('TF32')">TF32</button>
+            <button class="grey_button" id="F64" onclick="selectType('F64')">F64</button>
 
           </div>
           <br>
@@ -42,7 +43,7 @@
           <input class="input" type="text" id="h" size="16">
           <br><br>  
 
-          <button class="button" onclick="convert()">Convert</button><br><br>
+          <button class="grey_button" onclick="convert()">Convert</button><br><br>
           <label for="result">Result:</label>
           <input class="output" type="text" id="result" size="30"  readonly><br>
           <br>

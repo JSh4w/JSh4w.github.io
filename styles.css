@@ -1,10 +1,13 @@
 body {
+  /*making a grid background*/
+  /*defines grid size*/
+  background-size: 20px 20px;
+  background-image:
+    linear-gradient(to right, grey 2px, transparent 6px),
+    linear-gradient(to bottom, grey 2px, transparent 6px);
+  /*first gradient creates vertical lines and second creates horizontal*/
   background-color: #f0f0f0 ;
-}
-
-h1 {
-  color: navy;
-  margin-left: 50px;
+  font-family: 'Montserrat',sans-serif;
 }
 .signBit { 
   color: red; 
@@ -18,18 +21,24 @@ color: blue;
 .container {
   display: flex; /* Enables Flexbox */
   flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
-  align-items: flex-start; /*can use center instead*/
+  align-items: flex-start; 
   height: 50vh; /* Full viewport height */
-  gap: 1px; /* Optional: Adds space between flex items */
-  font-family: "Montserrat", sans-serif;
+  gap: 1px; /* Adds space between flex items */
+  /*font-family: "Montserrat", sans-serif;*/
 }
 
-.header {
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 20px;
-  font: "Montserrat";
+.light_header {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 48px; 
+  color: #000; 
+  background: #f0f0f0; 
+  padding: 20px 40px; 
+  border-radius: 25px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*for box shadow*/
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+  display: inline-block; /* Only apply background and padding to the text */
+  margin: 0; 
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 .h1{
@@ -40,12 +49,20 @@ color: blue;
   font-weight: 400;
 }
 
-.button {
+/*button for converting and selecting different floating types*/
+.grey_button {
   background: #333;
   color: #fff;
+  font-size: 16;
+  padding: 20px 40px;
   border: none;
+  border-radius: 15px; /* rounds the edges*/
+  cursor: pointer;
+  transition: background 0.3s;
 }
-
+.grey_button:hover{
+  background: #0056b3;
+}
 
 .row {
   display: flex;
