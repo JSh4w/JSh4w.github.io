@@ -32,14 +32,14 @@
           </div>
           <br>
           <div id="customInputs">
-            <label for="ew">EW:</label>
+            <label class="button_title" for="ew">EW</label>
             <input class="input" type="number" id="ew" size="3" disabled><br><br>
           
-            <label for="mw">MW:</label>
+            <label class="button_title" for="mw">MW</label>
             <input class="input" type="number" id="mw" size="3" disabled><br><br>
           </div>
         
-          <label for="h">Hex Value (h):</label>
+          <label class="button_title" for="h">Hex Value (h)</label>
           <input class="input" type="text" id="h" size="16">
           <br><br>  
 
@@ -53,18 +53,18 @@
 
         <div class="item" id="twos complement">
           <p>This returns the decimal value for an input in twos complement form</p>
-          <label for="binaryInput">Binary input</label>
+          <label class="button_title" for="binaryInput">Binary input</label>
           <input type="text" id="binaryInput" dir="rtl" oninput="call_twos_to_dec()"><br></br>
-          <label for="decimalOutput">Decimal output</label>
+          <label class="button_title" for="decimalOutput">Decimal output</label>
           <input type="text" id="decimalOutput" readonly><br>
         </div>
 
 
         <div class="item" id="hex-to-binary">
           <p>This just converts hexadecimal to binary for quick checks</p>
-          <label for="hexInput">Hex input</label>
+          <label class="button_title" for="hexInput">Hex input</label>
           <input type="text" id="hexInput" oninput="call_hex_bin_row1()"><br><br>
-          <label for="binOutput">Binary output</label>
+          <label class="button_title" for="binOutput">Binary output</label>
           <input type="text" id="binOutput" size="32" readonly><br>
         </div>
 
