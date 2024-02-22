@@ -3,10 +3,10 @@ body {
   /*defines grid size*/
   background-size: 20px 20px;
   background-image:
-    linear-gradient(to right, rgb(223, 223, 223) 1px, transparent 6px),
-    linear-gradient(to bottom, rgb(223, 223, 223) 1px, transparent 6px);
+    linear-gradient(to right, rgb(241, 241, 241) 1px, transparent 6px),
+    linear-gradient(to bottom, rgb(242, 242, 242) 1px, transparent 6px);
   /*first gradient creates vertical lines and second creates horizontal*/
-  background-color: #f0f0f0 ;
+  background-color: #ffffff ;
   font-family: 'Montserrat',sans-serif;
 }
 .signBit { 
@@ -29,9 +29,9 @@ color: blue;
 
 .light_header {
   font-family: 'Montserrat', sans-serif; 
-  font-size: 24px; 
+  font-size: 20px; 
   color: #000; 
-  background: #f0f0f0; 
+  background: #f1f1f1; 
   padding: 10px 20px; 
   border-radius: 25px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*for box shadow*/
