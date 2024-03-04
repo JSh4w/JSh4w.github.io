@@ -69,6 +69,10 @@ color: blue;
 .grey_button:hover{
   background: #0056b3;
 }
+.grey_button:active{
+  background: #0056b3;
+}
+
 
 .row {
   display: flex;
