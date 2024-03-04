@@ -3,8 +3,8 @@ body {
   /*defines grid size*/
   background-size: 20px 20px;
   background-image:
-    linear-gradient(to right, rgb(224, 224, 224) 1px, rgb(255, 255, 255) 10px),
-    linear-gradient(to bottom, rgb(224, 224, 224) 1px, rgb(255, 255, 255) 10px);
+    linear-gradient(to right, rgb(247, 247, 247) 1px, transparent 12px),
+    linear-gradient(to bottom, rgb(247, 247, 247) 1px, transparent 12px);
   /*first gradient creates vertical lines and second creates horizontal*/
   background-color: #ffffff ;
   font-family: 'Montserrat',sans-serif;
