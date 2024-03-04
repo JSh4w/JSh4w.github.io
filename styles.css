@@ -3,7 +3,7 @@ body {
   /*defines grid size*/
   background-size: 20px 20px;
   background-image:
-    linear-gradient(to right, rgb(240, 240, 240) 2px, white 10px),
+    /*linear-gradient(to right, rgb(240, 240, 240) 2px, white 10px),*/
     linear-gradient(to bottom, rgb(240, 240, 240) 2px, white 10px);
   /*first gradient creates vertical lines and second creates horizontal*/
   background-color: #ffffff ;
