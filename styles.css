@@ -101,3 +101,9 @@ color: blue;
   background: #f0f0f0;
   border: 1px solid #ccc;
 }
+
+.grey_bar {
+  height: 20px; 
+  background-color: grey; 
+  width: 100%; 
+}
