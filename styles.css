@@ -103,7 +103,8 @@ color: blue;
 }
 
 .grey_bar {
-  height: 20px; 
+  height: 14px; 
   background-color: grey; 
-  width: 100%; 
+  width: 85%; 
+  padding: 10px;
 }
