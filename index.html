@@ -22,7 +22,9 @@
               The output is given in decimal and coloured binary beneath. 
               If "ew" and "mw" are empty the hexadecimal input asssume F16, F32 or F64 inputs 
             </p>
-            <div class="grey_bar"> </div>
+            <div class="grey_bar_wrapper">
+              <div class="grey_bar"></div>
+            </div>
             <button class="grey_button" id="custom" onclick="selectType('custom')">Custom</button>
             <button class="grey_button" id="F16" onclick="selectType('F16')">F16</button>
             <button class="grey_button" id="F32" onclick="selectType('F32')">F32</button>
@@ -54,7 +56,9 @@
 
         <div class="item" id="twos complement">
           <p>This returns the decimal value for an input in twos complement form</p>
-          <div class="grey_bar"> </div>
+          <div class="grey_bar_wrapper">
+            <div class="grey_bar"></div>
+          </div>
           <label class="button_title" for="binaryInput">Binary input</label><br>
           <input class="input" type="text" id="binaryInput" dir="rtl" oninput="call_twos_to_dec()"><br></br>
           <label class="button_title" for="decimalOutput">Decimal output</label><br>
@@ -64,7 +68,9 @@
 
         <div class="item" id="hex-to-binary">
           <p>This just converts hexadecimal to binary for quick checks</p>
-          <div class="grey_bar"> </div>
+          <div class="grey_bar_wrapper">
+            <div class="grey_bar"></div>
+          </div>
           <label class="button_title" for="hexInput">Hex input</label><br>
           <input class="input" type="text" id="hexInput" oninput="call_hex_bin_row1()"><br><br>
           <label class="button_title" for="binOutput">Binary output</label><br>

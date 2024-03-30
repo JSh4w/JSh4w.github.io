@@ -102,9 +102,14 @@ color: blue;
   border: 1px solid #ccc;
 }
 
+.grey_bar_wrapper {
+  width: 85%; 
+  padding: 10px; /* This acts as the transparent area around the child */
+  background-color: transparent; /* Ensures the "padding" area is transparent */
+}
+
 .grey_bar {
   height: 14px; 
-  background-color: grey; 
-  width: 85%; 
-  padding: 10px;
+  background-color: grey; /* Main content area color */
+  width: 100%; /* Makes the child fill the parent */
 }
